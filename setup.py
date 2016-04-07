@@ -24,7 +24,6 @@ with open('requirements.txt') as requirements_file:
 with open('dev-requirements.txt') as dev_requirements_file:
     dev_requirements = [req for req in dev_requirements_file.readlines()]
 
-
 setup(
     name='sopel_modules.invite',
     version='0.1.0',

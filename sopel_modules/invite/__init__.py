@@ -10,4 +10,3 @@ from .invite import *
 __author__ = 'Max Gurela'
 __email__ = 'maxpowa@outlook.com'
 __version__ = '0.1.0'
-

@@ -9,7 +9,7 @@ from __future__ import unicode_literals, absolute_import, print_function, divisi
 
 from sopel.config.types import StaticSection, ValidatedAttribute
 from sopel.logger import get_logger
-from sopel.module import (commands, event, rule, priority, interval, 
+from sopel.module import (commands, event, rule, priority, interval,
     require_privilege, require_chanmsg, require_privmsg, require_admin, OP)
 from sopel.tools import events, SopelMemory
 
@@ -110,7 +110,7 @@ def depart_channel(bot, name):
         bot.say('Cancelling departure, population has reached acceptable minimum.', name)
         return
     LOGGER.info('Departing from {}, population did not reach minimum in delay period.'.format(name))
-    
+
     bot.part(name, 'Goodbye {}!'.format(name))
     bot.db.set_channel_value(name, 'autojoin', False)
     del bot.memory['departure_scheduler'][name]

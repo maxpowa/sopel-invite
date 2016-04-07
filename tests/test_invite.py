@@ -6,6 +6,7 @@ import unittest
 
 from sopel_modules.invite import invite
 
+
 class TestInvite(unittest.TestCase):
     def setUp(self):
         pass
