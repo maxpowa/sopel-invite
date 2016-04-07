@@ -20,7 +20,7 @@ LOGGER = get_logger(__name__)
 
 class InviteSection(StaticSection):
     minimum_users = ValidatedAttribute('minimum_users', parse=int, default=2)
-    delay = ValidatedAttribute('delay', parse=int, default=1)
+    delay = ValidatedAttribute('delay', parse=float, default=1)
 
 
 def configure(config):
@@ -93,7 +93,7 @@ def check_empty_chan(bot):
             LOGGER.info('Scheduling {} for departure, below minimum user count ({}<{})'
                 .format(channel.name, user_count, bot.config.invite.minimum_users))
             if (bot.config.invite.delay > 0):
-                bot.say('{} is below my minimum user population, scheduling departure for {} minutes from now.'
+                bot.say('{} is below my minimum user population, scheduling departure for {} minute(s) from now.'
                     .format(channel.name, bot.config.invite.delay, channel.name), channel.name)
             else:
                 bot.say('{} is below my minimum user population, departing now.'.format(channel.name), channel.name)
