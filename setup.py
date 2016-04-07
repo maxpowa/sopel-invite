@@ -27,7 +27,7 @@ with open('dev-requirements.txt') as dev_requirements_file:
 setup(
     name='sopel_modules.invite',
     version='0.1.0',
-    description='Sopel mInvite allets channel operators invite Sopel to their channels',
+    description='Sopel Invite allows channel operators to invite Sopel to their channels',
     long_description=readme + '\n\n' + history,
     author='Max Gurela',
     author_email='maxpowa@outlook.com',
